@@ -1,0 +1,349 @@
+openapi: 3.1.0
+info:
+  title: GEP API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 6 operation(s) read from 7 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; GEP has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 7
+    documentation: -1
+    pages-with-code: 7
+    pages-read: 7
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://api.gep.com/gep-smart/authentication
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentid-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentnumber-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/service-confirmation/serviceconfirmationoutbound-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/creategr-post
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/deletegr-delete
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/savedocument-post
+servers:
+- url: https://api-leoeu.gep.com
+paths:
+  /leo-gr-domaingateway-api/api/v1/{v1id}:
+    get:
+      operationId: get_leo_gr_domaingateway_api_api_v1_v1id
+      tags:
+      - Leo Gr Domaingateway Api
+      summary: GET /leo-gr-domaingateway-api/api/v1/Delete
+      x-source: https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/deletegr-delete
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLeoGrDomaingatewayApiApiV1V1IdResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location ''https://api-leouat.gep.com/leo-gr-domaingateway-api/api/v1/Delete''  --header ''accept: application/json''  --header
+          ''content-type: application/json''  --header ''subtypeappid: 39dd1c6a-2edc-40c7-b0d4-2e50755eb941''  --header ''event: leo-gr-delete''  --header
+          ''authorization: Bearer <token>''  --header ''ocp-apim-subscription-key: <subscription-key>''  --header ''x-gep-transaction-scope-id:
+          a'
+        collapsed_from: 2 example path(s) differing only at v1Id
+    post:
+      operationId: post_leo_gr_domaingateway_api_api_v1_v1id
+      tags:
+      - Leo Gr Domaingateway Api
+      summary: This POST API can be used by GEP to delete a Goods Receipt (GR) in QUANTUM.
+      x-source: https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/deletegr-delete
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Response media type. Use application/json.
+      - name: content-type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Payload media type. Use application/json.
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer token used for authentication.
+      - name: ocp-apim-subscription-key
+        in: header
+        required: true
+        schema:
+          type: string
+        description: APIM subscription key issued to the consumer.
+      - name: subtypeappid
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Sub-type application identifier of the Goods Receipt module.
+      - name: event
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Event name routing the request. Use leo-gr-delete.
+      - name: x-gep-transaction-scope-id
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Unique transaction/correlation id.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLeoGrDomaingatewayApiApiV1V1IdRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLeoGrDomaingatewayApiApiV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at v1Id
+  /leo-order-aggregator-api/api/v1/OrderAggregation/v1:
+    get:
+      operationId: get_leo_order_aggregator_api_api_v1_OrderAggregation_v1
+      tags:
+      - Leo Order Aggregator Api
+      summary: GET /leo-order-aggregator-api/api/v1/OrderAggregation/v1
+      x-source: https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentid-get
+      parameters:
+      - name: documentId
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLeoOrderAggregatorApiApiV1OrderaggregationV1Response'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api-leoeu.gep.com/leo-order-aggregator-api/api/v1/OrderAggregation/v1?documentId=eebfa84a-9841-4c25-897c-aceee8f24fb0'\
+          \  --header 'accept: application/json'  --header 'Authorization: Bearer <token>'  --header 'subtypeAppId: 1e6cc0ad-5273-4e97-af3c-81f1eed2d112'\n\
+          Success Scenario - Response\n{\n \"exception\": null,\n \"data\": {\n \"...\": \"aggregated order document (header fields mer"
+  /leo-order-aggregator-api/api/v1/OrderAggregation/v1/GetOrderByDocumentNumber:
+    get:
+      operationId: get_leo_order_aggregator_api_api_v1_OrderAggregation_v1_GetOrderByDocumentNumber
+      tags:
+      - Leo Order Aggregator Api
+      summary: GET /leo-order-aggregator-api/api/v1/OrderAggregation/v1/GetOrderByDocumentNumber
+      x-source: https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentnumber-get
+      parameters:
+      - name: documentNumber
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api-leoeu.gep.com/leo-order-aggregator-api/api/v1/OrderAggregation/v1/GetOrderByDocumentNumber?documentNumber=PO-2026-036249'\
+          \  --header 'accept: application/json'  --header 'Authorization: Bearer <token>'  --header 'subtypeAppId: 1e6cc0ad-5273-4e97-af3c-81f1eed2d112'\n\
+          \ Success Scenario Response {\n \"exception\": null,\n \"data\": {\n \"...\": \"<aggregated order document>\"\n },\n \"has"
+  /leo-sc-aggregator-api/api/v1/SCAggregator/GetServiceConfirmation:
+    get:
+      operationId: get_leo_sc_aggregator_api_api_v1_SCAggregator_GetServiceConfirmation
+      tags:
+      - Leo Sc Aggregator Api
+      summary: GET /leo-sc-aggregator-api/api/v1/SCAggregator/GetServiceConfirmation
+      x-source: https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/service-confirmation/serviceconfirmationoutbound-get
+      parameters:
+      - name: documentId
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api-leouateu.gep.com/leo-sc-aggregator-api/api/v1/SCAggregator/GetServiceConfirmation?documentId=1a47da71-949d-4c9e-8e66-911ce5a687a3'\
+          \  --header 'Authorization: Bearer <token>'  --header 'x-gep-transaction-scope-id: 7e833958-2f64-4b87-a6f9-2cb197cedfad'  --header 'subtypeAppId:\
+          \ dca4a8ba-e9d6-45dc-8443-62dc40d3c549'\n Response\n \"exception\": null,\n    \"data\": {\n        \"creat"
+  /token/gep:
+    get:
+      operationId: get_token_gep
+      tags:
+      - Token
+      summary: GET /token/gep
+      x-source: https://api.gep.com/gep-smart/authentication
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: http
+        snippet: "GET /token/gep HTTP/1.1 \nHost: api-smart.gep.com \nClient Certificate: {...} \ngep-auth-key: customer-unique-identifier \n\
+          \ Response: \n Attribute \n Description \n Expires \n Expiry time in minutes \n Token \n JWT Token \n StatusCode \n Status code for\
+          \ the response \n ErrorMessage \n Reason for the error, if any. \n Sample Response: \n{ \n    \"Expires\": 120, \n    \"Token\": \"\
+          your-jwt-token\", \n    \"StatusCode\": 200,"
+components:
+  schemas:
+    GetLeoGrDomaingatewayApiApiV1V1IdResponse:
+      type: object
+      properties:
+        isSuccess:
+          type: boolean
+        errorMessage:
+          type:
+          - string
+          - 'null'
+        errorCode:
+          type:
+          - string
+          - 'null'
+        returnValue:
+          type:
+          - string
+          - 'null'
+        hasData:
+          type: boolean
+        hasException:
+          type: boolean
+        exception:
+          type:
+          - string
+          - 'null'
+    PostLeoGrDomaingatewayApiApiV1V1IdRequest:
+      type: object
+      properties:
+        sourceSystemGRNumber:
+          type: string
+        grNumber:
+          type: string
+        documentDate:
+          type: string
+          format: date
+        postingDate:
+          type: string
+          format: date
+        operationName:
+          type: string
+        subTypeCode:
+          type: string
+        grLine:
+          type: array
+          items:
+            type: object
+            properties:
+              poNumber:
+                type: string
+              poLineNumber:
+                type: string
+              grLineNumber:
+                type: string
+              receivedQuantity:
+                type: integer
+              deliveredQty:
+                type: integer
+              receivedDate:
+                type: string
+                format: date
+    PostLeoGrDomaingatewayApiApiV1V1IdResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            grNumber:
+              type: string
+            sourceSystemGRNumber:
+              type: string
+            status:
+              type: string
+            transactionId:
+              type: string
+        statusCode:
+          type: string
+        errorDetails:
+          type: array
+          items: {}
+        successDetails:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+    GetLeoOrderAggregatorApiApiV1OrderaggregationV1Response:
+      type: object
+      properties:
+        exception:
+          type:
+          - string
+          - 'null'
+        data:
+          type: object
+          properties:
+            ? ''
+            : type: string
+        hasData:
+          type: boolean
+        hasException:
+          type: boolean
+    GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc:
+      type: object
+      properties:
+        exception:
+          type:
+          - string
+          - 'null'
+        data:
+          type: object
+          properties:
+            ? ''
+            : type: string
+        hasData:
+          type: boolean
+        hasException:
+          type: boolean
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Leo Gr Domaingateway Api
+- name: Leo Order Aggregator Api
+- name: Leo Sc Aggregator Api
+- name: Token

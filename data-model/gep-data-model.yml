@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-data-model.py
+source:
+- openapi/_ae-authored/gep-openapi-generated.yml
+notation: has_one = property $ref; has_many = array of $ref; belongs_to = <entity>_id field
+summary:
+  entities: 5
+  entities_in_spec: 5
+  relationships: 0
+entities:
+- name: GetLeoGrDomaingatewayApiApiV1V1IdResponse
+  fields: 7
+- name: GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc
+  fields: 4
+- name: GetLeoOrderAggregatorApiApiV1OrderaggregationV1Response
+  fields: 4
+- name: PostLeoGrDomaingatewayApiApiV1V1IdRequest
+  fields: 7
+- name: PostLeoGrDomaingatewayApiApiV1V1IdResponse
+  fields: 4
+relationships: []

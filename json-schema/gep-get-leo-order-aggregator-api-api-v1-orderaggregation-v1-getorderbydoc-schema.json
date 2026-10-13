@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/gep/main/json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json",
+  "title": "GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/gep-openapi-generated.yml#/components/schemas/GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc",
+  "type": "object",
+  "properties": {
+    "exception": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "": {
+          "type": "string"
+        }
+      }
+    },
+    "hasData": {
+      "type": "boolean"
+    },
+    "hasException": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,23 +1,112 @@
 aid: gep
+
 name: GEP
-description: 'GEP is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added
-  to the network as a stub for full-pipeline profiling.'
+
+description: GEP provides AI‑powered procurement and supply chain software, offering solutions such as quantum intelligence, e‑invoicing, strategic
+  consulting, and managed services. The company emphasizes sustainability, diversity, and innovation across global markets, serving clients with
+  end‑to‑end source‑to‑pay suites and advanced analytics. GEP’s platform integrates AI to optimize spend, risk, and supplier management, supporting
+  enterprises worldwide.
+
 url: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- Procurement
+- Supply Chain
+- AI
+- SaaS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/gep-rules.yml
+- type: JSONLD
+  url: json-ld/gep-context.jsonld
+- type: Vocabulary
+  url: vocabulary/gep-vocabulary.yml
+- type: DataModel
+  url: data-model/gep-data-model.yml
+- type: Conformance
+  url: conformance/gep-conformance.yml
+- type: LLMsTxt
+  url: llms/gep-llms.txt
+- type: Hosts
+  url: hosts/gep-hosts.yml
+- type: Vendors
+  url: vendors/gep-vendors.yml
+- type: TermsOfService
+  url: https://www.gep.com/terms-use
+- type: PrivacyPolicy
+  url: https://www.gep.com/privacy-statement
+- type: Newsroom
+  url: https://www.gep.com/company/news
+- type: Login
+  url: https://www.gep.com/login
+- type: Leadership
+  url: https://www.gep.com/company/leadership
+- type: Blog
+  url: https://www.gep.com/blog/mind/nft-basics
+- type: DomainSecurity
+  url: security/gep-domain-security.yml
 - type: Website
   url: https://www.gep.com
+
+apis:
+- aid: gep:gep-api
+  name: GEP API
+  description: 'GEP API as documented publicly: 6 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not the
+    provider''s own document.'
+  humanURL: https://api.gep.com/gep-smart/authentication
+  baseURL: https://api-leoeu.gep.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/gep-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-13'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://partner.gep.com/mcp
+    status: 403
+  - url: https://www.gep.com
+    status: 200
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
