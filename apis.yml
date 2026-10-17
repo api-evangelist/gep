@@ -70,16 +70,16 @@ common:
   url: https://www.gep.com
 
 apis:
-- aid: gep:gep-api
-  name: GEP API
-  description: 'GEP API as documented publicly: 6 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not the
-    provider''s own document.'
+- aid: gep:gep-leo-gr-domaingateway-api-api
+  name: GEP Leo Gr Domaingateway API
+  description: The Leo Gr Domaingateway Api API from GEP — 1 operation(s) for leo gr domaingateway api.
   humanURL: https://api.gep.com/gep-smart/authentication
   baseURL: https://api-leoeu.gep.com
+  tags:
+  - Leo Gr Domaingateway Api
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/gep-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/gep-leo-gr-domaingateway-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request-schema.json
   - type: JSONSchema
@@ -87,10 +87,77 @@ apis:
   - type: JSONSchema
     url: json-schema/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
   - type: JSONSchema
-    url: json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
   - type: JSONSchema
-    url: json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
-
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
+- aid: gep:gep-leo-order-aggregator-api-api
+  name: GEP Leo Order Aggregator API
+  description: The Leo Order Aggregator Api API from GEP — 2 operation(s) for leo order aggregator api.
+  humanURL: https://api.gep.com/gep-smart/authentication
+  baseURL: https://api-leoeu.gep.com
+  tags:
+  - Leo Order Aggregator Api
+  properties:
+  - type: OpenAPI
+    url: openapi/gep-leo-order-aggregator-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
+- aid: gep:gep-leo-sc-aggregator-api-api
+  name: GEP Leo Sc Aggregator API
+  description: The Leo Sc Aggregator Api API from GEP — 1 operation(s) for leo sc aggregator api.
+  humanURL: https://api.gep.com/gep-smart/authentication
+  baseURL: https://api-leoeu.gep.com
+  tags:
+  - Leo Sc Aggregator Api
+  properties:
+  - type: OpenAPI
+    url: openapi/gep-leo-sc-aggregator-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
+- aid: gep:gep-token-api
+  name: GEP Token API
+  description: The Token API from GEP — 1 operation(s) for token.
+  humanURL: https://api.gep.com/gep-smart/authentication
+  baseURL: https://api-leoeu.gep.com
+  tags:
+  - Token
+  properties:
+  - type: OpenAPI
+    url: openapi/gep-token-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response-schema.json
 x-coverage:
   state: none
   reason: no-developer-program

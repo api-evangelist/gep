@@ -1,0 +1,50 @@
+openapi: 3.2.0
+info:
+  title: GEP Token API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 6 operation(s) read from 7 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; GEP has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 7
+    documentation: -1
+    pages-with-code: 7
+    pages-read: 7
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://api.gep.com/gep-smart/authentication
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentid-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/purchase-order/orderbydocumentnumber-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/service-confirmation/serviceconfirmationoutbound-get
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/creategr-post
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/deletegr-delete
+  - https://api.gep.com/gep-quantum/gep-quantum-rest-apis/gep-quantum-transaction-data-apis/goods-receipt/savedocument-post
+servers:
+- url: https://api-leoeu.gep.com
+security:
+- bearer: []
+tags:
+- name: Token
+paths:
+  /token/gep:
+    get:
+      operationId: get_token_gep
+      tags:
+      - Token
+      summary: GET /token/gep
+      x-source: https://api.gep.com/gep-smart/authentication
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: http
+        snippet: "GET /token/gep HTTP/1.1 \nHost: api-smart.gep.com \nClient Certificate: {...} \ngep-auth-key: customer-unique-identifier \n Response: \n Attribute \n Description \n Expires \n Expiry time in minutes \n Token \n JWT Token \n StatusCode \n Status code for the response \n ErrorMessage \n Reason for the error, if any. \n Sample Response: \n{ \n    \"Expires\": 120, \n    \"Token\": \"your-jwt-token\", \n    \"StatusCode\": 200,"
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
