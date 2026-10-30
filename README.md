@@ -64,5 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-GEP is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added to the network as a stub for full-pipeline profiling.
-- https://www.gep.com
+GEP provides AI‑powered procurement and supply chain software, offering solutions such as quantum intelligence, e‑invoicing, strategic consulting, and managed services. The company emphasizes sustainability, diversity, and innovation across global markets, serving clients with end‑to‑end source‑to‑pay suites and advanced analytics. GEP’s platform integrates AI to optimize spend, risk, and supplier management, supporting enterprises worldwide.
+
+**Areas:** Company · Procurement · Supply Chain · Artificial Intelligence · Software-as-a-Service
+
+## GEP on APIs.io
+
+Everything profiled for GEP is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gep/](https://apis.io/providers/gep/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [GEP Leo Gr Domaingateway API](https://apis.io/apis/gep/gep-leo-gr-domaingateway-api-api/) — The Leo Gr Domaingateway Api API from GEP — 1 operation(s) for leo gr domaingateway api.
+- [GEP Leo Order Aggregator API](https://apis.io/apis/gep/gep-leo-order-aggregator-api-api/) — The Leo Order Aggregator Api API from GEP — 2 operation(s) for leo order aggregator api.
+- [GEP Leo Sc Aggregator API](https://apis.io/apis/gep/gep-leo-sc-aggregator-api-api/) — The Leo Sc Aggregator Api API from GEP — 1 operation(s) for leo sc aggregator api.
+- [GEP Token API](https://apis.io/apis/gep/gep-token-api/) — The Token API from GEP — 1 operation(s) for token.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (5)
+
+The data models the API reads and writes.
+
+- [GetLeoGrDomaingatewayApiApiV1V1IdResponse](https://apis.io/schemas/gep/gep-get-leo-gr-domaingateway-api-api-v1-v1-id-response/)
+- [GetLeoOrderAggregatorApiApiV1OrderaggregationV1Getorderbydoc](https://apis.io/schemas/gep/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-getorderbydoc/)
+- [GetLeoOrderAggregatorApiApiV1OrderaggregationV1Response](https://apis.io/schemas/gep/gep-get-leo-order-aggregator-api-api-v1-orderaggregation-v1-response/)
+- [PostLeoGrDomaingatewayApiApiV1V1IdRequest](https://apis.io/schemas/gep/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-request/)
+- [PostLeoGrDomaingatewayApiApiV1V1IdResponse](https://apis.io/schemas/gep/gep-post-leo-gr-domaingateway-api-api-v1-v1-id-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Gep Context](https://apis.io/jsonld/gep/gep-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [GEP API Rules](https://apis.io/rules/gep/gep-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Gep Domain Security](https://apis.io/security/gep/gep-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.gep.com)
+- [Blog](https://www.gep.com/blog/mind/nft-basics)
+- [Terms of service](https://www.gep.com/terms-use)
+- [Privacy policy](https://www.gep.com/privacy-statement)
+
+## API Evangelist rating
+
+**Kin Score 23.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 25.9 |
+| Contract governance | 22.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 34.2 |
+
+**Agent readiness 20.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gep/](https://apis.io/providers/gep/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for GEP: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gep/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
